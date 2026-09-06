@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: pagina-brujeria-backend
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_IDS
+        sync: false
+      - key: DB_PATH
+        value: /var/data/data.sqlite
+    disk:
+      name: pagina-brujeria-data
+      mountPath: /var/data
+      sizeGB: 1
