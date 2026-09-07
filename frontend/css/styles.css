@@ -416,7 +416,7 @@ img{max-width:100%;display:block;}
 .redes{padding:90px 0; background:var(--bg-alt); position:relative; z-index:2;}
 .redes-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(5,1fr);
   gap:16px;
   margin-top:40px;
 }

@@ -41,8 +41,13 @@ document.querySelectorAll("#headerWhatsapp, .whatsapp-float, #redesWhatsapp, #co
 });
 
 // ---------- Redes sociales ----------
-// TODO: reemplazar "#" por las URLs reales una vez el cliente cree las
-// cuentas de Facebook, Instagram y YouTube del negocio.
-// document.querySelector('[data-red="facebook"]').href = "https://facebook.com/...";
-// document.querySelector('[data-red="instagram"]').href = "https://instagram.com/...";
-// document.querySelector('[data-red="youtube"]').href = "https://youtube.com/...";
+const REDES_URLS = {
+  facebook: "https://www.facebook.com/profile.php?id=61594118674919",
+  instagram: "https://www.instagram.com/brujomayordecatecatemaco/",
+  tiktok: "https://www.tiktok.com/@brujomayoroficial0609?lang=es-419",
+  youtube: "https://www.youtube.com/@BrujomayordeCatemaco-u5u",
+};
+Object.entries(REDES_URLS).forEach(([red, url]) => {
+  const el = document.querySelector(`[data-red="${red}"]`);
+  if (el) el.href = url;
+});
