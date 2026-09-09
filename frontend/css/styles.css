@@ -337,6 +337,83 @@ img{max-width:100%;display:block;}
   padding-bottom:2px;
 }
 
+/* ---------- Catálogo de servicios ---------- */
+.catalogo{padding:100px 0; position:relative; z-index:2;}
+.catalogo-sub{
+  max-width:520px;
+  margin:0 auto 48px;
+  text-align:center;
+  color:var(--text-muted);
+  font-size:15px;
+}
+.catalogo-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+}
+.catalogo-card{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:2px;
+  padding:32px 28px;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.catalogo-card:hover{border-color:var(--gold); transform:translateY(-3px);}
+.catalogo-icon{
+  display:inline-flex;
+  color:var(--gold);
+  margin-bottom:16px;
+}
+.catalogo-card h3{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:22px;
+  color:var(--gold-soft);
+  margin:0 0 16px;
+  text-transform:uppercase;
+  letter-spacing:0.3px;
+}
+.catalogo-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.catalogo-list li{
+  position:relative;
+  padding-left:16px;
+  color:var(--text-muted);
+  font-size:14px;
+}
+.catalogo-list li::before{
+  content:"";
+  position:absolute;
+  left:0; top:8px;
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--gold);
+}
+.catalogo-cta{
+  text-align:center;
+  margin-top:48px;
+}
+.btn-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--whatsapp);
+  color:var(--whatsapp-dark);
+  padding:15px 32px;
+  border-radius:2px;
+  font-family:var(--font-body);
+  font-weight:500;
+  font-size:14px;
+  transition:background .2s ease, transform .2s ease;
+}
+.btn-whatsapp:hover{background:#2fe077; transform:translateY(-2px);}
+
 /* ---------- Testimonios ---------- */
 .testimonios{
   padding:100px 0;
@@ -476,6 +553,7 @@ img{max-width:100%;display:block;}
 
 /* ---------- Responsive ---------- */
 @media (max-width:860px){
+  .catalogo-grid{grid-template-columns:1fr;}
   .servicios-grid{grid-template-columns:1fr;}
   .testi-row{grid-template-columns:1fr; gap:32px;}
   .sobre-mi-grid{grid-template-columns:1fr; gap:32px;}

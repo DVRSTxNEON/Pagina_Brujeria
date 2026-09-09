@@ -33,7 +33,7 @@ function buildWhatsappLink(message) {
 })();
 
 // ---------- WhatsApp CTAs ----------
-document.querySelectorAll("#headerWhatsapp, .whatsapp-float, #redesWhatsapp, #contactoWhatsapp").forEach((el) => {
+document.querySelectorAll("#headerWhatsapp, .whatsapp-float, #redesWhatsapp, #contactoWhatsapp, #catalogoWhatsapp").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
     window.open(buildWhatsappLink(), "_blank", "noopener");
